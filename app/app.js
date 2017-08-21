@@ -3,9 +3,9 @@
    angular
     .module('moviecat',[
       'ngRoute',
+      'moviecat.jsonp',
       'moviecat.homepage',
-      'moviecat.intheater',
-      'moviecat.jsonp'
+      'moviecat.movietype',
       ]);
 
 })(angular);

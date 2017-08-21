@@ -11,10 +11,10 @@
 <body ng-app="moviecat">
     <!-- 顶部导航栏开始 -->
     <div class="top">
-        <div class="header">
+        <div class="header" ng-controller="SearchController">
             <a href="#/home_page"><img src="assets/img/logo.png" alt=""></a>
             <div class="search">
-                <input class="my-input" type="text" placeholder="电影搜索">
+                <input class="my-input" type="text" placeholder="电影搜索" ng-model="searchText">
                 <button>搜索</button>
             </div>
         </div>
@@ -49,7 +49,7 @@
     <script src="../node_modules/angular-route/angular-route.js"></script>
     <script src="./app.js"></script>
     <script src="./homepage/module.js"></script>
-    <script src="./intheater/module.js"></script>
+    <script src="./movieList/module.js"></script>
     <script src="./common/jsonpService.js"></script>
     <!-- <script src="./common/jsonpService.js"></script> -->
 </body>
