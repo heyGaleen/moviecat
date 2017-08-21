@@ -6,7 +6,7 @@
     .service('jsonpService', ['$window', function ($window) {
       // 通过 $window服务 来获取全局对象
       var window = $window,
-        document = window.document;
+      document = window.document;
 
       // 暴露jsonp方法
       this.jsonp = jsonp;
@@ -23,7 +23,7 @@
 
         // 2 拼接 callback
         // 注意：fn必须是全局函数才有效！！！
-        var callbackName = 'itcast_' + (new Date() - 0);
+        var callbackName = 'idouban_' + (new Date() - 0);
         url += 'callback=' + callbackName;
         // 小技巧：在函数中通过给window添加属性，来创建一个全局函数
         // 添加给 window 的函数，就是全局函数

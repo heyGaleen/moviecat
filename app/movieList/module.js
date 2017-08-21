@@ -41,7 +41,7 @@
       })
 
       //实现分页
-      $scope.goPage = function(curPage){
+      $scope.goPage = function(curPage,totalPage){
         console.log(curPage);
         if(curPage<=0 || curPage>$scope.totalPage){
           return;

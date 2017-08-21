@@ -10,9 +10,11 @@
         })
     }])
     .controller('DetailController',['$scope','$routeParams','jsonpService',function($scope,$routeParams,jsonpService){
+      $scope.isShow = true;
       var url = 'https://api.douban.com/v2/movie/subject/' + $routeParams.id;
       jsonpService.jsonp(url,{},function(data){
-        console.log(data);
+        // console.log(data);
+        $scope.isShow = false;
         $scope.data = data;
 
         //手动触发angular的脏检查机制
