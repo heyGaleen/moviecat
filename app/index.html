@@ -18,19 +18,13 @@
                 <button ng-click="search()">搜索</button>
             </div>
         </div>
-        <nav class="nav">
-            <ul>
-                <!--li中添加 active 类样式，显示焦点状态。-->
-                <li class="active"><a href="#/home_page">首页</a></li>
-                <li><a href="#/in_theaters">正在热映</a></li>
-                <li><a href="#/coming_soon">即将上映</a></li>
-                <li><a href="#/top250">Top250</a></li>
-            </ul>
+        <nav class="nav" menu-directive>
+            
         </nav>
     </div>
     <!-- 顶部导航栏结束 -->
 
-
+    
     <div class="container ng-view">
         
         
@@ -51,8 +45,9 @@
     <script src="./homepage/module.js"></script>
     <script src="./movieList/module.js"></script>
     <script src="./common/jsonpService.js"></script>
+    <script src="./moviedetail/module.js"></script>
     <script src="./search/module.js"></script>
-    <!-- <script src="./common/jsonpService.js"></script> -->
+    <script src="./common/menuDirective.js"></script>
 </body>
 
 </html>

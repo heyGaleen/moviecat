@@ -12,10 +12,11 @@
 
     //url:https://api.douban.com/v2/movie/in_theaters?callback=JSON_CALLBACK
     .controller('MovieTypeController',['$scope','$http','$routeParams','$route','jsonpService',function($scope,$http,$routeParams,$route,jsonpService){
-      console.log($routeParams)
+      // console.log($routeParams)
       const count = 5;
       var curPage = $routeParams.curPage || '1';
       $scope.curPage = curPage;
+      $scope.isShow = true;
 
       //处理请求参数
       var urlParams = {
@@ -34,6 +35,7 @@
         //分页信息
         $scope.total = data.total;
         $scope.totalPage = Math.ceil(data.total/data.count);
+        $scope.isShow = false;
         //ajax请求是异步的,需要手动调用$apply()方法通知angular更新
         $scope.$apply();
       })

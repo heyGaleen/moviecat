@@ -5,7 +5,7 @@
       $scope.searchText = '';
 
       //url:/v2/movie/search?q={text}
-      console.log($location.url())
+      // console.log($location.url())
       $scope.search = function(){
         //判断用户没有输入搜索内容则不执行
         if(!$scope.searchText.trim()){
