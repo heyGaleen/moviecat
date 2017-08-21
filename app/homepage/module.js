@@ -7,5 +7,8 @@
         .when('/home_page',{
           templateUrl:'./homepage/view.html'
         })
+        .otherwise({
+          redirectTo:'/home_page'
+        })
     }])
 })(angular)
