@@ -6,6 +6,7 @@
       'moviecat.jsonp',
       'moviecat.homepage',
       'moviecat.movietype',
+      'moviecat.search'
       ]);
 
 })(angular);

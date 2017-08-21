@@ -17,10 +17,14 @@
       var curPage = $routeParams.curPage || '1';
       $scope.curPage = curPage;
 
-      jsonpService.jsonp('https://api.douban.com/v2/movie/'+$routeParams.movieType,{
+      //处理请求参数
+      var urlParams = {
         start:(curPage-1)*count,
-        count:5
-      },function(data){
+        count:5,
+      }
+      var q = $routeParams.q;
+      q && (urlParams.q=q)
+      jsonpService.jsonp('https://api.douban.com/v2/movie/'+$routeParams.movieType,urlParams,function(data){
         // console.log(data)
         // console.log($routeParams)
         

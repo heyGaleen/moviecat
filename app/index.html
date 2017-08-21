@@ -15,7 +15,7 @@
             <a href="#/home_page"><img src="assets/img/logo.png" alt=""></a>
             <div class="search">
                 <input class="my-input" type="text" placeholder="电影搜索" ng-model="searchText">
-                <button>搜索</button>
+                <button ng-click="search()">搜索</button>
             </div>
         </div>
         <nav class="nav">
@@ -51,6 +51,7 @@
     <script src="./homepage/module.js"></script>
     <script src="./movieList/module.js"></script>
     <script src="./common/jsonpService.js"></script>
+    <script src="./search/module.js"></script>
     <!-- <script src="./common/jsonpService.js"></script> -->
 </body>
 
